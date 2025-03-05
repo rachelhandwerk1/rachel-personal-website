@@ -1,4 +1,43 @@
+/* General Styles */
 body {
-    background: blue;
-  }
-  
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Sticky Header */
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; /* Adjust padding to prevent content from touching edges */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  box-sizing: border-box;
+}
+
+/* Profile Picture */
+.profile-pic {
+  width: 50px;  /* Adjust size as needed */
+  height: 50px;
+  border-radius: 50%; /* Keeps it circular */
+  object-fit: cover;  /* Ensures the image fills the space */
+  margin-right: 20px; /* Adds spacing from the edge */
+}
+
+/* Main Content */
+main {
+  padding-top: 80px; /* Prevent content from being hidden behind the fixed header */
+}
+
+.content {
+  padding: 20px;
+  height: 200vh; /* Just to demonstrate scrolling */
+}
