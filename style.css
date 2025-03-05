@@ -70,3 +70,27 @@ main {
   padding: 20px;
   height: 200vh; /* Just to demonstrate scrolling */
 }
+
+/* Hero Section */
+#hero {
+  height: 100vh; /* Makes it fill the full screen */
+  display: flex;
+  flex-direction: column; /* Stacks text elements vertically */
+  justify-content: center; /* Centers vertically */
+  align-items: center; /* Centers text vertically */
+  padding-left: 50px; /* Adds left padding */
+  max-width: 40%; /* Limits text width to 40% of the page */
+  color: white; /* Text color */
+}
+
+#hero h1 {
+  font-size: 72px;
+  font-family: "Montserrat", Helvetica, sans-serif;
+  margin-bottom: 10px;
+}
+
+#hero p {
+  font-size: 24px;
+  font-family: "Montserrat", Helvetica, sans-serif;
+  line-height: 1.5;
+}
