@@ -105,10 +105,57 @@ section {
   width: 100%; /* Full width */
   height: 66vh; /* 2/3 of the screen height */
   display: flex;
+  flex-direction: column;
   justify-content: center; /* Center text horizontally */
   align-items: center; /* Center text vertically */
   padding: 20px;
-  text-align: center; /* Keeps text centered */
+}
+
+/* Section Title (h2) */
+section h2 {
+  font-size: 36px;
+  font-family: "Montserrat", Helvetica, sans-serif;
+  color: black; /* Ensures it's visible */
+  text-align: center;
+  margin-bottom: 20px; /* Adds spacing below h2 */
+}
+
+/* About Me Container */
+.about-container {
+  display: flex;
+  justify-content: center; 
+  align-items: flex-start; /* Aligns columns at the top */
+  gap: 80px;
+  width: calc(100% - 100px); /* Keeps 50px spacing on both sides */
+  margin: 0 auto; /* Centers the container */
+}
+
+/* About Me Columns */
+.about-column {
+  flex: 1; /* Makes all columns equal width */
+  flex-basis: 250px;
+  max-width: 300px;
+  text-align: center;
+  padding: 20px; /* Adds spacing inside each column */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Ensures headers align properly */
+}
+
+/* Ensure Headers Align */
+.about-column h3 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: black
+}
+
+/* Ensure Paragraph Text Aligns */
+.about-column p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-top: auto; /* Ensures all paragraphs align with each other */
+  color: black
 }
 
 /* Colors for Each Section */
@@ -122,13 +169,6 @@ section {
 
 #education {
   background-color: white;
-}
-
-/* Section Headings */
-section h2 {
-  font-size: 36px;
-  font-family: "Montserrat", Helvetica, sans-serif;
-  color: white;
 }
 
 html, body {
