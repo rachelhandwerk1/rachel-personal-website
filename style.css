@@ -3,7 +3,7 @@ body {
   font-family: "Montserrat", Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #59848b;
+  background-color: white;
 }
 
 /* Sticky Header */
@@ -60,9 +60,9 @@ body {
 /* Main Content */
 main {
   margin-top: 80px; /* Prevent content from being hidden behind the fixed header */
-  background-color: #59848b; /* Your hex color */
+  background-color: #59848b;
   color: white; /* Ensures text is readable */
-  padding: 20px; /* Adds spacing around content */
+  padding: 0;
   min-height: 100vh; /* Ensures it takes up the full viewport if empty */
 }
 
@@ -77,10 +77,11 @@ main {
   display: flex;
   flex-direction: column; /* Stacks text elements vertically */
   justify-content: center; /* Centers vertically */
-  align-items: center; /* Centers text vertically */
+  align-items: flex-start; /* Centers text vertically */
   padding-left: 50px; /* Adds left padding */
   max-width: 40%; /* Limits text width to 40% of the page */
   color: white; /* Text color */
+  text-align: left; /* Ensures text inside is left-aligned */
 }
 
 #hero h1 {
@@ -97,4 +98,39 @@ main {
 
 html {
   scroll-behavior: smooth;
+}
+
+/* Section Styles */
+section {
+  width: 100%; /* Full width */
+  height: 66vh; /* 2/3 of the screen height */
+  display: flex;
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+  padding: 20px;
+  text-align: center; /* Keeps text centered */
+}
+
+/* Colors for Each Section */
+#about {
+  background-color: white;
+}
+
+#work {
+  background-color: #B8D2D5;
+}
+
+#education {
+  background-color: white;
+}
+
+/* Section Headings */
+section h2 {
+  font-size: 36px;
+  font-family: "Montserrat", Helvetica, sans-serif;
+  color: white;
+}
+
+html, body {
+  overflow-x: hidden; /* Prevents horizontal scrolling */
 }
