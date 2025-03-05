@@ -24,6 +24,30 @@ body {
   box-sizing: border-box;
 }
 
+/* Navigation Styles */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px; /* Adjust spacing between links */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  display: inline;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+  color: #f4a261; /* Highlight color on hover */
+}
+
 /* Profile Picture */
 .profile-pic {
   width: 50px;  /* Adjust size as needed */
