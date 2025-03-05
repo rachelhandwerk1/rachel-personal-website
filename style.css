@@ -35,6 +35,10 @@ body {
 /* Main Content */
 main {
   padding-top: 80px; /* Prevent content from being hidden behind the fixed header */
+  background-color: #59848b; /* Your hex color */
+  color: white; /* Ensures text is readable */
+  padding: 20px; /* Adds spacing around content */
+  min-height: 100vh; /* Ensures it takes up the full viewport if empty */
 }
 
 .content {
