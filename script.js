@@ -1,3 +1,8 @@
-const h2 = document.createElement("h2");
-h2.textContent = "This content added by JavaScript";
-document.querySelector("body").appendChild(h2);
+function toggleText(id) {
+    var textElement = document.getElementById(id);
+    if (textElement.style.display === "none" || textElement.style.display === "") {
+        textElement.style.display = "block"; // Show text
+    } else {
+        textElement.style.display = "none"; // Hide text
+    }
+}
