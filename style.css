@@ -30,7 +30,7 @@ body {
   display: flex;
   gap: 40px; /* Adjust spacing between links */
   margin: 0;
-  padding: 0;
+  padding-left: 50px;
 }
 
 .nav-links li {
@@ -54,7 +54,7 @@ body {
   height: 50px;
   border-radius: 50%; /* Keeps it circular */
   object-fit: cover;  /* Ensures the image fills the space */
-  margin-right: 20px; /* Adds spacing from the edge */
+  margin-right: 50px; /* Adds spacing from the edge */
 }
 
 /* Main Content */
