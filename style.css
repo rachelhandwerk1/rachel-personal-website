@@ -3,7 +3,7 @@ body {
   font-family: "Montserrat", Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #59848b;
 }
 
 /* Sticky Header */
@@ -35,7 +35,7 @@ body {
 
 /* Main Content */
 main {
-  padding-top: 120px; /* Prevent content from being hidden behind the fixed header */
+  margin-top: 80px; /* Prevent content from being hidden behind the fixed header */
   background-color: #59848b; /* Your hex color */
   color: white; /* Ensures text is readable */
   padding: 20px; /* Adds spacing around content */
