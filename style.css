@@ -124,23 +124,17 @@ section {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 140px 10px 40px;
+  padding: 100px 10px 40px;
   scroll-margin-top: 80px;
 }
 
-/* Section Title (h2) */
+/* Section Title (h2) - Reduced Space Above */
 section h2 {
   font-size: 36px;
   color: black;
   text-align: center;
   margin-bottom: 40px;
-  margin-top: 100px;
-}
-
-/* Ensure consistent spacing between h2 and content in Work & Education */
-#work h2,
-#education h2 {
-  margin-bottom: 70px; /* Ensures equal spacing */
+  margin-top: 50px; /* Reduced to 50px */
 }
 
 /* General Column Container for Alignment */
@@ -165,13 +159,13 @@ section h2 {
   padding: 30px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  align-items: center;
 }
 
 /* Ensure Headers Align */
 .about-column h3,
 .work-column h3 {
-  font-size: 32px;
+  font-size: 34px;
   font-weight: bold;
   margin-bottom: 20px;
   color: black;
@@ -186,26 +180,61 @@ section h2 {
   color: black;
 }
 
-/* Work Experience Images */
-.work-image {
+/* Work & About Me Icons */
+.work-image,
+.about-image {
   width: 180px;
   height: auto;
   cursor: pointer;
-  transition: transform 0.3s ease-in-out;
   margin-bottom: 10px;
 }
 
-.work-image:hover {
-  transform: scale(1.1);
+/* Work & About Me Buttons */
+.toggle-btn {
+  background-color: #f4a261;
+  border: none;
+  color: white;
+  font-size: 20px;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Work Experience Text (Hidden by Default) */
-.work-text {
+/* Restore Hover Effect on Buttons */
+.toggle-btn:hover {
+  background-color: #e08e47;
+  transform: scale(1.05);
+}
+
+/* Centering the Button Under the Icon */
+.about-column .toggle-btn,
+.work-column .toggle-btn {
+  align-self: center;
+}
+
+/* Work & About Me Text (Initially Hidden) */
+.work-text,
+.about-text {
   font-size: 18px;
   line-height: 1.5;
   color: black;
   margin-top: 10px;
-  display: none;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+/* Show Work & About Me Text */
+.work-text.show,
+.about-text.show {
+  max-height: 400px;
+  opacity: 1;
 }
 
 /* 📌 Updated Education Section - Text on Left, Image on Right */
@@ -217,7 +246,7 @@ section h2 {
   width: 80%;
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: 20px; /* Matches Work Experience spacing */
+  margin-top: 20px;
 }
 
 /* Education Text (Left Side) */
@@ -236,7 +265,7 @@ section h2 {
 }
 
 .education-image img {
-  width: 400px; /* 🔹 Increased Image Size */
+  width: 400px;
   height: auto;
   max-width: 100%;
   border-radius: 10px;
@@ -302,17 +331,9 @@ section h2 {
     text-align: left;
   }
 
-  #hero h1 {
-    font-size: 48px;
-  }
-
-  #hero p {
-    font-size: 20px;
-  }
-
-  section {
-    min-height: 100vh;
-    padding: 120px 10px 40px;
+  .toggle-btn {
+    display: block;
+    margin: 10px auto 0;
   }
 
   .education-container {
@@ -332,6 +353,6 @@ section h2 {
 
   .education-image img {
     width: 80%;
-    max-width: 350px; /* Adjusted for smaller screens */
+    max-width: 350px;
   }
 }

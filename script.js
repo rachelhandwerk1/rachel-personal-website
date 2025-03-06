@@ -1,8 +1,13 @@
-function toggleText(id) {
-    var textElement = document.getElementById(id);
-    if (textElement.style.display === "none" || textElement.style.display === "") {
-        textElement.style.display = "block"; // Show text
+function toggleText(id, btn) {
+    let text = document.getElementById(id);
+  
+    if (text.classList.contains("show")) {
+      text.classList.remove("show");
+      btn.innerHTML = "▼"; // Change back to down arrow
     } else {
-        textElement.style.display = "none"; // Hide text
+      text.classList.add("show");
+      btn.innerHTML = "▲"; // Change to up arrow
     }
-}
+  }
+
+

@@ -49,24 +49,40 @@
         <section id="work">
           <h2>Work Experience</h2>
           <div class="work-container">
+      
+              <!-- PNC Bank -->
               <div class="work-column">
-                  <img src="bank.png" alt="Bank" class="work-image" onclick="toggleText('pnc-text')">
-                  <p id="pnc-text" class="work-text">PNC Bank</p>
+                  <img src="bank.png" alt="Bank" class="work-image">
+                  <p class="work-text">PNC Bank</p>
+                  <button class="toggle-btn" onclick="toggleText('pnc-text', this)">▼</button>
+                  <p id="pnc-text" class="work-text hidden">Role: Product Manager<br>Automated underwriting and litigation processes for PNC Bank.</p>
               </div>
+      
+              <!-- United Healthcare -->
               <div class="work-column">
-                  <img src="health.png" alt="Health" class="work-image" onclick="toggleText('uhc-text')">
-                  <p id="uhc-text" class="work-text">United Healthcare</p>
+                  <img src="health.png" alt="Health" class="work-image">
+                  <p class="work-text">United Healthcare</p>
+                  <button class="toggle-btn" onclick="toggleText('uhc-text', this)">▼</button>
+                  <p id="uhc-text" class="work-text hidden">Role: Senior Product Owner<br>Optimized healthcare applications for United Healthcare.</p>
               </div>
+      
+              <!-- La Colombe -->
               <div class="work-column">
-                  <img src="coffee.png" alt="Coffee" class="work-image" onclick="toggleText('lac-text')">
-                  <p id="lac-text" class="work-text">La Colombe Coffee Roasters</p>
+                  <img src="coffee.png" alt="Coffee" class="work-image">
+                  <p class="work-text">La Colombe Coffee Roasters</p>
+                  <button class="toggle-btn" onclick="toggleText('lac-text', this)">▼</button>
+                  <p id="lac-text" class="work-text hidden">Role: Product Owner<br>Enhanced the B2B website for La Colombe Coffee Roasters.</p>
               </div>
+      
+              <!-- Power Home Remodeling -->
               <div class="work-column">
-                  <img src="home.png" alt="Home" class="work-image" onclick="toggleText('power-text')">
-                  <p id="power-text" class="work-text">Power Home Remodeling</p>
+                  <img src="home.png" alt="Home" class="work-image">
+                  <p class="work-text">Power Home Remodeling</p>
+                  <button class="toggle-btn" onclick="toggleText('power-text', this)">▼</button>
+                  <p id="power-text" class="work-text hidden">Role: Product Manager<br>Automated Sales and Corporate Finance processes for Power Home Remodeling.</p>
               </div>
           </div>
-      </section>      
+        </section>         
         <section id="education">
           <h2>Education</h2>
           <div class="education-container">
