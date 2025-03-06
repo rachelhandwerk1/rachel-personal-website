@@ -3,7 +3,7 @@ body {
   font-family: "Montserrat", Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: white;
+  background-color: #59848b;
 }
 
 /* Sticky Header */
@@ -18,7 +18,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 20px; /* Adjust padding to prevent content from touching edges */
+  padding: 0px 20px;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   box-sizing: border-box;
@@ -28,7 +28,7 @@ body {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 40px; /* Adjust spacing between links */
+  gap: 40px;
   margin: 0;
   padding-left: 50px;
 }
@@ -45,43 +45,38 @@ body {
 }
 
 .nav-links a:hover {
-  color: #f4a261; /* Highlight color on hover */
+  color: #f4a261;
 }
 
 /* Profile Picture */
 .profile-pic {
-  width: 50px;  /* Adjust size as needed */
+  width: 50px;
   height: 50px;
-  border-radius: 50%; /* Keeps it circular */
-  object-fit: cover;  /* Ensures the image fills the space */
-  margin-right: 50px; /* Adds spacing from the edge */
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 50px;
 }
 
 /* Main Content */
 main {
-  margin-top: 80px; /* Prevent content from being hidden behind the fixed header */
+  margin-top: 80px;
   background-color: #59848b;
-  color: white; /* Ensures text is readable */
+  color: white;
   padding: 0;
-  min-height: 100vh; /* Ensures it takes up the full viewport if empty */
-}
-
-.content {
-  padding: 20px;
-  height: 200vh; /* Just to demonstrate scrolling */
+  min-height: 100vh;
 }
 
 /* Hero Section */
 #hero {
-  height: 100vh; /* Makes it fill the full screen */
+  height: 100vh;
   display: flex;
-  flex-direction: column; /* Stacks text elements vertically */
-  justify-content: center; /* Centers vertically */
-  align-items: flex-start; /* Centers text vertically */
-  padding-left: 50px; /* Adds left padding */
-  max-width: 40%; /* Limits text width to 40% of the page */
-  color: white; /* Text color */
-  text-align: left; /* Ensures text inside is left-aligned */
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 50px;
+  max-width: 40%;
+  color: white;
+  text-align: left;
 }
 
 #hero h1 {
@@ -96,50 +91,48 @@ main {
   line-height: 1.5;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 /* Section Styles */
 section {
-  width: 100%; /* Full width */
-  height: 66vh; /* 2/3 of the screen height */
+  width: 100%;
+  min-height: 66vh; /* Always at least 2/3 of the screen height */
+  height: auto; /* Allows section to expand if content is larger */
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Center text horizontally */
-  align-items: center; /* Center text vertically */
-  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 10px;
+  scroll-margin-top: 80px;
 }
 
 /* Section Title (h2) */
 section h2 {
   font-size: 36px;
   font-family: "Montserrat", Helvetica, sans-serif;
-  color: black; /* Ensures it's visible */
+  color: black;
   text-align: center;
-  margin-bottom: 20px; /* Adds spacing below h2 */
+  margin-bottom: 20px;
 }
 
 /* About Me Container */
 .about-container {
   display: flex;
-  justify-content: center; 
-  align-items: flex-start; /* Aligns columns at the top */
+  justify-content: center;
+  align-items: flex-start;
   gap: 80px;
-  width: calc(100% - 100px); /* Keeps 50px spacing on both sides */
-  margin: 0 auto; /* Centers the container */
+  width: calc(100% - 100px);
+  margin: 0 auto;
 }
 
 /* About Me Columns */
 .about-column {
-  flex: 1; /* Makes all columns equal width */
+  flex: 1;
   flex-basis: 250px;
   max-width: 300px;
   text-align: center;
-  padding: 20px; /* Adds spacing inside each column */
+  padding: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Ensures headers align properly */
+  justify-content: flex-start;
 }
 
 /* Ensure Headers Align */
@@ -147,15 +140,15 @@ section h2 {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 10px;
-  color: black
+  color: black;
 }
 
 /* Ensure Paragraph Text Aligns */
 .about-column p {
   font-size: 22px;
   line-height: 1.5;
-  margin-top: auto; /* Ensures all paragraphs align with each other */
-  color: black
+  margin-top: auto;
+  color: black;
 }
 
 /* Work Experience Container */
@@ -163,7 +156,7 @@ section h2 {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 80px; /* Controls spacing between columns */
+  gap: 80px;
   width: calc(100% - 100px);
   margin: 0 auto;
 }
@@ -171,25 +164,25 @@ section h2 {
 /* Work Experience Columns */
 .work-column {
   flex: 1;
-  flex-basis: 300px; /* Controls default width */
-  max-width: 400px; /* Allows expansion */
+  flex-basis: 250px;
+  max-width: 300px;
   text-align: center;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
 }
 
 /* Work Experience Images */
 .work-image {
-  width: 150px; /* Adjust size as needed */
+  width: 150px;
   height: auto;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
 
 .work-image:hover {
-  transform: scale(1.1); /* Slight zoom effect on hover */
+  transform: scale(1.1);
 }
 
 /* Work Experience Text (Hidden by Default) */
@@ -198,7 +191,7 @@ section h2 {
   line-height: 1.5;
   color: black;
   margin-top: 10px;
-  display: none; /* Initially hidden */
+  display: none;
 }
 
 /* Colors for Each Section */
@@ -215,5 +208,78 @@ section h2 {
 }
 
 html, body {
-  overflow-x: hidden; /* Prevents horizontal scrolling */
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive Design for Tablets and Smaller Screens */
+@media (max-width: 1024px) {
+  #hero {
+    max-width: 80%;
+    padding-left: 20px;
+  }
+
+  .about-container, .work-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    width: 90%;
+  }
+
+  .about-column, .work-column {
+    max-width: 100%;
+  }
+}
+
+/* Responsive Design for Mobile Phones */
+@media (max-width: 768px) {
+  .sticky-header {
+    flex-direction: column;
+    height: auto;
+    padding: 10px 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+    padding-left: 0;
+  }
+
+  .profile-pic {
+    margin: 10px 0;
+  }
+
+  #hero h1 {
+    font-size: 48px;
+  }
+
+  #hero p {
+    font-size: 20px;
+  }
+
+  section {
+    min-height: auto; /* Allow sections to shrink naturally on small screens */
+    padding: 60px 10px;
+  }
+
+  section h2 {
+    font-size: 28px;
+  }
+
+  .about-container, .work-container {
+    flex-direction: column;
+    width: 100%;
+    gap: 30px;
+  }
+
+  .about-column, .work-column {
+    width: 90%;
+  }
+
+  .work-image {
+    width: 100px;
+  }
 }
