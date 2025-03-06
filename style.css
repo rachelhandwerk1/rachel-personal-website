@@ -3,7 +3,6 @@ body {
   font-family: "Montserrat", Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #59848b;
 }
 
 /* Sticky Header */
@@ -18,10 +17,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 20px;
-  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  padding: 0 20px;
   z-index: 1000;
-  box-sizing: border-box;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* Navigation Styles */
@@ -59,126 +57,141 @@ body {
 
 /* Main Content */
 main {
-  margin-top: 80px;
-  background-color: #59848b;
-  color: white;
   padding: 0;
   min-height: 100vh;
+  background-color: transparent;
 }
 
-/* Hero Section */
+/* Hero Section - Full-Screen Background Image */
 #hero {
   height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  padding-left: 50px;
-  max-width: 40%;
-  color: white;
   text-align: left;
+  color: white;
+  padding-left: 50px;
+  padding-right: 20px;
+
+  /* 🎨 Background Image */
+  background-image: url('hero.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+
+  /* Move Hero Image Up to Cover Sticky Header Space */
+  margin-top: -80px;
+  overflow: hidden;
+}
+
+/* Overlay to Ensure Readability */
+#hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+/* Ensure Hero Text Appears Above Overlay */
+#hero h1, #hero p {
+  position: relative;
+  z-index: 1;
 }
 
 #hero h1 {
   font-size: 72px;
-  font-family: "Montserrat", Helvetica, sans-serif;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 #hero p {
   font-size: 24px;
-  font-family: "Montserrat", Helvetica, sans-serif;
   line-height: 1.5;
 }
 
-/* Section Styles */
+/* Section Styles - Full Page Height */
 section {
   width: 100%;
-  min-height: 66vh; /* Always at least 2/3 of the screen height */
-  height: auto; /* Allows section to expand if content is larger */
+  min-height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
-  padding: 40px 10px;
+  padding: 140px 10px 40px;
   scroll-margin-top: 80px;
 }
 
 /* Section Title (h2) */
 section h2 {
   font-size: 36px;
-  font-family: "Montserrat", Helvetica, sans-serif;
   color: black;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px; /* Adjusted for better spacing */
+  margin-top: 100px;
 }
 
-/* About Me Container */
-.about-container {
+/* Ensure consistent spacing between h2 and content in Work Experience */
+#work h2 {
+  margin-bottom: 50px; /* Matches spacing in About Me */
+}
+
+/* General Column Container for Alignment */
+.about-container,
+.work-container {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 80px;
+  gap: 100px; /* Increased spacing between columns */
   width: calc(100% - 100px);
+  max-width: 1400px;
   margin: 0 auto;
 }
 
-/* About Me Columns */
-.about-column {
+/* Columns for About Me & Work Experience */
+.about-column,
+.work-column {
   flex: 1;
-  flex-basis: 250px;
-  max-width: 300px;
+  flex-basis: 350px;
+  max-width: 400px;
   text-align: center;
-  padding: 20px;
+  padding: 30px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 }
 
 /* Ensure Headers Align */
-.about-column h3 {
+.about-column h3,
+.work-column h3 {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 10px;
   color: black;
 }
 
-/* Ensure Paragraph Text Aligns */
-.about-column p {
+/* Ensure Paragraph/Text Aligns */
+.about-column p,
+.work-column p {
   font-size: 22px;
   line-height: 1.5;
   margin-top: auto;
   color: black;
 }
 
-/* Work Experience Container */
-.work-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 80px;
-  width: calc(100% - 100px);
-  margin: 0 auto;
-}
-
-/* Work Experience Columns */
-.work-column {
-  flex: 1;
-  flex-basis: 250px;
-  max-width: 300px;
-  text-align: center;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-}
-
 /* Work Experience Images */
 .work-image {
-  width: 150px;
+  width: 180px; /* Slightly larger icons */
   height: auto;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
+  margin-bottom: 10px; /* Matches spacing with h3 in About Me */
 }
 
 .work-image:hover {
@@ -208,6 +221,9 @@ section h2 {
 }
 
 html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
   overflow-x: hidden;
 }
 
@@ -218,19 +234,21 @@ html {
 /* Responsive Design for Tablets and Smaller Screens */
 @media (max-width: 1024px) {
   #hero {
-    max-width: 80%;
+    max-width: 100%;
     padding-left: 20px;
   }
 
-  .about-container, .work-container {
+  .about-container,
+  .work-container {
     flex-direction: column;
     align-items: center;
-    gap: 40px;
+    gap: 50px; /* Adjusted spacing for tablets */
     width: 90%;
   }
 
-  .about-column, .work-column {
-    max-width: 100%;
+  .about-column,
+  .work-column {
+    max-width: 90%;
   }
 }
 
@@ -252,6 +270,14 @@ html {
     margin: 10px 0;
   }
 
+  #hero {
+    align-items: flex-start;
+    padding-left: 20px;
+    padding-right: 10px;
+    max-width: 100%;
+    text-align: left;
+  }
+
   #hero h1 {
     font-size: 48px;
   }
@@ -261,25 +287,30 @@ html {
   }
 
   section {
-    min-height: auto; /* Allow sections to shrink naturally on small screens */
-    padding: 60px 10px;
+    min-height: 100vh;
+    padding: 120px 10px 40px;
   }
 
   section h2 {
     font-size: 28px;
+    margin-top: 80px;
+    margin-bottom: 40px; /* Keep spacing consistent on smaller screens */
   }
 
-  .about-container, .work-container {
+  .about-container,
+  .work-container {
     flex-direction: column;
     width: 100%;
     gap: 30px;
   }
 
-  .about-column, .work-column {
+  .about-column,
+  .work-column {
     width: 90%;
+    flex-basis: auto;
   }
 
   .work-image {
-    width: 100px;
+    width: 120px;
   }
 }
