@@ -22,6 +22,81 @@ body {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* 🔹 Hide Menu Icon by Default */
+.menu-icon {
+  display: none; /* Shown only on mobile */
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  position: absolute;
+  left: 20px; /* Moves it to the top-left */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* 🔹 Ensure Profile Picture Stays on Right */
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: auto; /* Pushes it to the right */
+}
+
+/* 🔹 Mobile Navigation Menu */
+.nav-menu {
+  display: flex;
+}
+
+/* 🔹 Mobile Styles: Hide Nav Links */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block; /* Show icon on small screens */
+  }
+
+  /* 🔹 Adjust Header to Align Items */
+  .sticky-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    height: auto; /* Ensure the header adjusts properly */
+  }
+
+  .nav-menu {
+    display: none; /* Hide nav links initially */
+    position: absolute;
+    top: 80px; /* Below header */
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    text-align: center;
+  }
+
+  .nav-menu nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-menu nav ul li {
+    padding: 15px;
+    border-bottom: 1px solid #555;
+  }
+
+  .nav-menu nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+  }
+
+  /* When menu is active, show it */
+  .nav-menu.show {
+    display: block;
+  }
+}
+
 /* Navigation Styles */
 .nav-links {
   list-style: none;
